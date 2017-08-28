@@ -24,7 +24,8 @@ function _M.new(service)
 end
 
 function _M:transform_credentials(credentials)
-
+  
+  ngx.log(ngx.DEBUG, '_M:transform_credentials')
   local url = 'http://two-methods-prints-headers.herokuapp.com/checkjwt'
 
   local http_client = http_ng.new{
