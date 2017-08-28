@@ -37,7 +37,13 @@ function _M:transform_credentials(credentials)
   local res = http_client.post(url, { access_token = credentials.access_token} )
   
   if res.status == 200 and res.body then
+	
+	ngx.log(ngx.DEBUG, '===================' .. res.body)
+
     body = cjson.decode(res.body)
+
+
+
     authorized = body.authorized
     if authorized then
       local app_id = body.aud
