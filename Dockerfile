@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/3scale-amp20/apicast-gateway
+FROM registry.access.redhat.com/3scale-amp20/apicast-gateway:1.0
 
 # Copy customized source code to the appropriate directory
 COPY ./apicast.conf /opt/app-root/src/conf.d/
